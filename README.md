@@ -68,53 +68,89 @@ First a baseline model is run using the Dummy Classifier. Additionally, common c
 
 For the critical life-saving decisions of ICU patients, it is important to minimize false negatives, so Recall is a crucial metric in this exercise. The following summarizes the recall scores for the different models fit along with the times, test accuracies, and F-1 score.
 
+
 Dummy Classifier:
+
 Test accuracy-0.85
+
 Test F1 score-0
+
 Test Recall score-0
+
 Time-0.0003
 
 
+
 Logistic Regression:
+
 Test accuracy-0.64
+
 Test F1 score-0.38
+
 Test Recall score-0.82
+
 Time-0.02
 
 
+
 KNN:
+
 Test accuracy-0.50
+
 Test F1 score-0.31
+
 Test Recall score-0.82
+
 Time-0.01
+
 
 
 Decision Tree:
+
 Test accuracy-0.36
+
 Test F1 score-0.28
+
 Test Recall score-0.90
+
 Time-0.08
 
 
+
 SVM:
+
 Test accuracy-0.77
+
 Test F1 score-0.37
+
 Test Recall score-0.50
+
 Time-0.11
 
 
+
 Random Forest:
+
 Test accuracy-0.33
+
 Test F1 score-0.28
+
 Test Recall score-0.95
+
 Time-0.55
 
 
+
 Ridge Classifier:
+
 Test accuracy-0.66
+
 Test F1 score-0.40
+
 Test Recall score-0.82
+
 Time-0.01
+
 
 
 Lazy Predict package is additionally used as it can run several ML models in a few lines of code. So instead of running models manually, lazypredict classifier is fit and scored during cross-validation for scores like ROC AUC, accuracy, F1, and Recall. Among several models run using lazypredict classifier, it is hard to determine the best model with different important metrics like Recall, ROC AUC, and F-1 score. **Random Forest classifier has the best recall (>0.95), but its F-1 score is very low**.
@@ -132,7 +168,7 @@ Feature importance was derived from the coefficients of these models. From Ridge
 #### Next steps
 What suggestions do you have for next steps?
 
-Next steps after Module 20 would be to improve the modeling efforts to get higher F-1 and ROC AUC scores. This will be discussed with the learning facilitator, Savio. Additionally, discrepancy between F-1 scores for a given model obtained with lazypredict classifier models and the model I ran will be a question for the Consultation call.
+Next steps after Module 20 would be to improve the modeling efforts to get higher F-1 and ROC AUC scores. This will be discussed with the learning facilitator, Savio. Additionally, discrepancy between F-1 scores for a given model obtained with lazypredict classifier and the model I ran will be a question (for the Consultation call).
 
 Additionally, neural network based models will be explored. 
 
@@ -140,7 +176,7 @@ And lastly, SHAP (SHapley Additive exPlanations) analysis may further be carried
 
 
 #### Outline of project
--Data: https://github.com/amanvashishtgould/CapstoneProject/tree/main/Data 
+- Data: https://github.com/amanvashishtgould/CapstoneProject/tree/main/Data 
 - Notebook: https://github.com/amanvashishtgould/CapstoneProject/blob/main/Capstone_hospital_mortality.ipynb 
 
 ##### Contact and Further Information
