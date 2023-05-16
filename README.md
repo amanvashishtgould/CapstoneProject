@@ -9,7 +9,7 @@ TBD
 #### Rationale
 Why should anyone care about this question?
 
-The predictors of in-hospital mortality for intensive care units (ICU) remain poorly characterized. Developing predictive models based on mortality risk factors can positively prevent mortality through controlling acute conditions and planning in intensive care units. This could help hospitals to focus their resources and care on critical patients who have these mortality risk factors, and improve ICU survival rates and overall, the healthcare system.
+The predictors of in-hospital mortality for intensive care units (ICU) remain poorly characterized. Developing predictive models based on mortality risk factors can prevent mortality through controlling acute conditions and planning in intensive care units. This could help hospitals to focus their resources and care on critical patients who have these mortality risk factors, and improve ICU survival rates and overall, the healthcare system.
 
 #### Research Question
 What are you trying to answer?
