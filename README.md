@@ -19,7 +19,7 @@ The goal of this project is to predict whether or not a patient at a hospital IC
 #### Data Sources
 What data will you use to answer you question?
 
-The dataset used is obtained from the MIMIC-III database found on Kaggle (https://www.kaggle.com/datasets/saurabhshahane/in-hospital-mortality-prediction) . It is a publicly available critical care database containing de-identified data on patient admissions to the ICU of the Beth Israel Deaconess Medical Center, Boston, USA, between 1 June, 2001 and 31 October, 2012. In the data, the demographic characteristics and vital signs extracted were recorded during the ﬁrst 24 hours of each admission and laboratory variables were measured during the entire ICU stay. Comorbidities were identified using ICD-9 codes.
+The dataset used is from the Medical Information Mart for Intensive Care III (MIMIC-III) based database found on Kaggle (https://www.kaggle.com/datasets/saurabhshahane/in-hospital-mortality-prediction) . It is a publicly available critical care database containing de-identified data on patient admissions to the ICU of the Beth Israel Deaconess Medical Center, Boston, USA, between 1 June, 2001 and 31 October, 2012. In the data, the demographic characteristics and vital signs extracted were recorded during the ﬁrst 24 hours of each admission and laboratory variables were measured during the entire ICU stay. Comorbidities were identified using ICD-9 codes.
 
 #### Methodology
 What methods are you using to answer the question?
