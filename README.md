@@ -1,2 +1,2 @@
-# CapstoneProject: Hospital Mortality Prediction
+# Capstone Project: Hospital Mortality Prediction
 **Author: Aman Vashisht**
