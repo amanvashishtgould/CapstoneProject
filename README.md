@@ -14,7 +14,7 @@ The predictors of in-hospital mortality for intensive care units (ICU) remain po
 #### Research Question
 What are you trying to answer?
 
-The goal of this project is to predict whether or not a patient at a hospital ICU would survive. To this end, I aim to develop and validate prediction models for all-cause in-hospital mortality among ICU-admitted patients, using different demographic, personal medical history, comorbidities, and lab (bloodwork, urine test, pulmonary tests, cardiac tests etc.) data.
+The goal of this project is to predict whether or not a patient at a hospital ICU would survive. To this end, I aim to develop and cross-validate prediction models for all-cause in-hospital mortality among ICU-admitted patients, using different demographic, personal medical history, comorbidities, and lab (bloodwork, urine test, pulmonary tests, cardiac tests etc.) data.
 
 #### Data Sources
 What data will you use to answer you question?
