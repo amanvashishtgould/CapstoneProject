@@ -57,8 +57,10 @@ Histogram distributions of all the predictor variable columns are plotted and co
 
 *Data Preparation: Feature Engineering and Train-test split*:
 
-A quick seaborn-based heatmap of correlation of different variables is plotted. The outcome does not seem to be highly correlated with any of the variables There are some high correlations amongst the variables like PT and INR; MCH and MCV; hematocrit and RBC; and Lymphocytes and Neutrophils. One variable in each of these pairs of multicollinear variables are removed. 
-KNN Imputer was used to fill the missing values, after splitting the data into train and test sets. 
+A quick seaborn-based heatmap of correlation of different variables is plotted. The outcome does not seem to be highly correlated with any of the variables There are some high correlations amongst the variables like PT and INR; MCH and MCV; hematocrit and RBC; and Lymphocytes and Neutrophils. One variable in each of these pairs of multicollinear variables are removed.
+
+KNN Imputer was used to fill the missing values, after splitting the data into train and test sets.
+
 Since the target data is imbalanced, Synthetic Minority Oversampling Technique (SMOTE) is utilized to balance out the target classes. 
 Lastly, the features are scaled/standardized using StandardScaler().
 
@@ -69,7 +71,7 @@ First a baseline model is run using the Dummy Classifier. Additionally, common c
 For the critical life-saving decisions of ICU patients, it is important to minimize false negatives, so Recall is a crucial metric in this exercise. The following summarizes the recall scores for the different models fit along with the times, test accuracies, and F-1 score.
 
 
-Dummy Classifier:
+*Dummy Classifier:*
 
 Test accuracy-0.85
 
@@ -81,7 +83,7 @@ Time-0.0003
 
 
 
-Logistic Regression:
+*Logistic Regression:*
 
 Test accuracy-0.64
 
@@ -93,7 +95,7 @@ Time-0.02
 
 
 
-KNN:
+*KNN:*
 
 Test accuracy-0.50
 
@@ -105,7 +107,7 @@ Time-0.01
 
 
 
-Decision Tree:
+*Decision Tree:*
 
 Test accuracy-0.36
 
@@ -117,7 +119,7 @@ Time-0.08
 
 
 
-SVM:
+*SVM:*
 
 Test accuracy-0.77
 
@@ -129,7 +131,7 @@ Time-0.11
 
 
 
-Random Forest:
+*Random Forest:*
 
 Test accuracy-0.33
 
@@ -141,7 +143,7 @@ Time-0.55
 
 
 
-Ridge Classifier:
+*Ridge Classifier:*
 
 Test accuracy-0.66
 
