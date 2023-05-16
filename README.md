@@ -30,7 +30,7 @@ What methods are you using to answer the question?
 - Since this is a classification machine learning (ML) problem, several ML models like Logistic Regression, Decision Trees, K Nearest Neighbors (KNN), and Support Vector machines (SVM) will be fit.
 - Additionally, some ensemble models like Random Forests, XGB Classifier, AdaBoost Classifier etc. will also be tried after they are covered in the program.
 -Furthermore, Neural Networks models will also be explored as a ML model option for this problem.
-- Permutation importance will be further employed to identify the variables that predict what drives the mortality in the patients.
+- Permutation importance will be further employed to identify the variables that predict the mortality factors in the patients.
 - SHAP (SHapley Additive exPlanations) analysis may further be carried out to explain causal effects (such as how each model feature has contributed to an individual prediction), as time allows.
 
 #### Results
