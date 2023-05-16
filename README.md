@@ -24,8 +24,8 @@ The dataset used is obtained from the MIMIC-III database found on Kaggle (https:
 #### Methodology
 What methods are you using to answer the question?
 
--CRISP-DM framework will be followed throughout this project.
--After data cleaning, a basic exploratory data analysis will be performed.
+- CRISP-DM framework will be followed throughout this project.
+- After data cleaning, a basic exploratory data analysis will be performed.
 - Given the many variables, Principal Component Analysis (PCA) may be explored for the purposes of dimensionality reduction.
 - Since this is a classification machine learning (ML) problem, several ML models like Logistic Regression, Decision Trees, K Nearest Neighbors (KNN), and Support Vector machines (SVM) will be fit.
 - Additionally, some ensemble models like Random Forests, XGB Classifier, AdaBoost Classifier etc. will also be tried after they are covered in the program.
