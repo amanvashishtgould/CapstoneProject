@@ -57,7 +57,7 @@ Histogram distributions of all the predictor variable columns are plotted and co
 
 *Data Preparation: Feature Engineering and Train-test split*:
 
-A quick seaborn-based heatmap of correlation of different variables is plotted. The outcome does not seem to be highly correlated with any of the variables There are some high correlations amongst the variables like PT and INR; MCH and MCV; hematocrit and RBC; and Lymphocytes and Neutrophils. One variable in each of these pairs of multicollinear variables are removed.
+A quick seaborn-based heatmap of correlation of different variables is plotted. The outcome does not seem to be highly correlated with any of the variables. There are some high correlations amongst the variables like PT and INR; MCH and MCV; hematocrit and RBC; and Lymphocytes and Neutrophils. One variable in each of these pairs of multicollinear variables are removed.
 
 KNN Imputer was used to fill the missing values, after splitting the data into train and test sets.
 
