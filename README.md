@@ -61,7 +61,8 @@ A quick seaborn-based heatmap of correlation of different variables is plotted. 
 
 KNN Imputer was used to fill the missing values, after splitting the data into train and test sets.
 
-Since the target data is imbalanced, Synthetic Minority Oversampling Technique (SMOTE) is utilized to balance out the target classes. 
+Since the target data is imbalanced, Synthetic Minority Oversampling Technique (SMOTE) is utilized to balance out the target classes.
+
 Lastly, the features are scaled/standardized using StandardScaler().
 
 *Modeling*:
