@@ -36,9 +36,11 @@ What methods are you using to answer the question?
 #### Results
 What did your research find?
 
-*Business understanding*: The goal of this project is to predict the mortality of ICU patients at a hospital (i.e., whether or not a patient at the ICU would survive).
+*Business understanding*: 
+The goal of this project is to predict the mortality of ICU patients at a hospital (i.e., whether or not a patient at the ICU would survive).
 
-*Data understanding*: The dataset is a publicly available critical care database containing de-identified data on patient admissions, and includes demographic characteristics, vital signs, medical history like comorbidities, and measured laboratory variables.
+*Data understanding*: 
+The dataset is a publicly available critical care database containing de-identified data on patient admissions, and includes demographic characteristics, vital signs, medical history like comorbidities, and measured laboratory variables.
 
 *Dara processing and Exploratory Data Analysis*: 
 There are 1177 rows and 51 columns in this dataset, with numeric(int or float) type columns.
