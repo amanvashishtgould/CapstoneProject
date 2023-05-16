@@ -69,7 +69,7 @@ Lastly, the features are scaled/standardized using StandardScaler().
 
 First a baseline model is run using the Dummy Classifier. Additionally, common classifier models like Logistic Regression, K Nearest Neighbor (KNN), Decision Trees, and Support Vector Machines (SVM) are fit and cross-validated using the test-set. Two additional models namely Ridge Classifier and Random Forests are also fit and cross-validated, after perusing a package called Lazypredict’s results (discussed below). Confusion matrix is plotted, and classification reports showing different scores like Precision, Recall, F-1 are shown.
 
-For the critical life-saving decisions of ICU patients, it is important to minimize false negatives, so Recall is a crucial metric in this exercise. The following summarizes the recall scores for the different models fit along with the times, test accuracies, and F-1 score.
+For the critical life-saving decisions of ICU patients, it is important to minimize false negatives, so Recall is a crucial metric in this exercise. The following summarizes the recall scores for the different models fit along with the times, test accuracies, and F-1 scores.
 
 
 *Dummy Classifier:*
