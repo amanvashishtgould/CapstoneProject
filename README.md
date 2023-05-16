@@ -163,7 +163,7 @@ While a high recall is crucial to minimize false negatives of wrongly identifyin
 
 *Hyperparameter optimization using GridSearchCV*:
 
-This was done for the two models that are performing best overall....i.e, Ridge regression and Logistic regression which have a recall higher than or equal to 82% and F-1 scores of about 40% in models that I ran. The ROC AUC scores of both these models are 0.79. This gridsearchcv step did not improve the test scores compared to the previous models. 
+This was done for the two models that are performing best overall....i.e, Ridge regression and Logistic regression which have a recall higher than or equal to 82% and F-1 scores of about 40%(70%) in models that I ran (in corresoinding lazypredict models). The ROC AUC scores of both these models are 0.79. This gridsearchcv step did not improve the test scores compared to the previous models. 
 
 Feature importance was derived from the coefficients of these models. From Ridge classifier, the top 5 variables that predict the survival/mortality of a patient in ICU are:  Chloride, Blood Sodium, Bicarbonate, Anion gap, and Urea nitrogen. From Logistic Regression, the top 5 variables that predict the survival/mortality of a patient in ICU are similar to Ridge Classifier:  Chloride, Blood Sodium, Bicarbonate, Anion gap, and Urea nitrogen.
 
