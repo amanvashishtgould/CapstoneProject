@@ -36,13 +36,16 @@ What methods are you using to answer the question?
 #### Results
 What did your research find?
 
-*Business understanding*: 
+*Business understanding*:
+
 The goal of this project is to predict the mortality of ICU patients at a hospital (i.e., whether or not a patient at the ICU would survive).
 
-*Data understanding*: 
+*Data understanding*:
+
 The dataset is a publicly available critical care database containing de-identified data on patient admissions, and includes demographic characteristics, vital signs, medical history like comorbidities, and measured laboratory variables.
 
-*Dara processing and Exploratory Data Analysis*: 
+*Dara processing and Exploratory Data Analysis*:
+
 There are 1177 rows and 51 columns in this dataset, with numeric(int or float) type columns.
 
 The target variable is the outcome column, and the predictor variables are columns including age, BMI, gender, red blood cell count, white blood cell(leukocyte) count, diabetes (presence or absence), urine output, urea nitrogen level, blood chloride level, blood sodium level, blood anion gap, arterial/venous partial carbon dioxide pressure, respiration rate, heart rate, systolic and diastolic blood pressure, etc.
@@ -53,12 +56,14 @@ The outcome data is imbalanced as there are about 86.5 % of survivors and 13.5% 
 Histogram distributions of all the predictor variable columns are plotted and colored by the outcome variable, and it was seen that some variables like age, BMI, atrialfibrillation, platelets, blood potassium, anion gap, bicarbonate, and lactic acid do seem to show some differences in distributions for different outcomes.
 
 *Data Preparation: Feature Engineering and Train-test split*:
+
 A quick seaborn-based heatmap of correlation of different variables is plotted. The outcome does not seem to be highly correlated with any of the variables There are some high correlations amongst the variables like PT and INR; MCH and MCV; hematocrit and RBC; and Lymphocytes and Neutrophils. One variable in each of these pairs of multicollinear variables are removed. 
 KNN Imputer was used to fill the missing values, after splitting the data into train and test sets. 
 Since the target data is imbalanced, Synthetic Minority Oversampling Technique (SMOTE) is utilized to balance out the target classes. 
 Lastly, the features are scaled/standardized using StandardScaler().
 
 *Modeling*:
+
 First a baseline model is run using the Dummy Classifier. Additionally, common classifier models like Logistic Regression, K Nearest Neighbor (KNN), Decision Trees, and Support Vector Machines (SVM) are fit and cross-validated using the test-set. Two additional models namely Ridge Classifier and Random Forests are also fit and cross-validated, after perusing a package called Lazypredict’s results (discussed below). Confusion matrix is plotted, and classification reports showing different scores like Precision, Recall, F-1 are shown.
 
 For the critical life-saving decisions of ICU patients, it is important to minimize false negatives, so Recall is a crucial metric in this exercise. The following summarizes the recall scores for the different models fit along with the times, test accuracies, and F-1 score.
@@ -118,6 +123,7 @@ While a high recall is crucial to minimize false negatives of wrongly identifyin
 
 
 *Hyperparameter optimization using GridSearchCV*:
+
 This was done for the two models that are performing best overall....i.e, Ridge regression and Logistic regression which have a recall higher than or equal to 82% and F-1 scores of about 40% in models that I ran. This did not improve the test scores compared to models above. The ROC AUC scores of both these models are 0.79.
 
 Feature importance was derived from the coefficients of these models. From Ridge classifier, the top 5 variables that predict the survival/mortality of a patient in ICU are:  Chloride, Blood Sodium, Bicarbonate, Anion gap, and Urea nitrogen. From Logistic Regression, the top 5 variables that predict the survival/mortality of a patient in ICU are similar to Ridge Classifier:  Chloride, Blood Sodium, Bicarbonate, Anion gap, and Urea nitrogen.
