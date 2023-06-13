@@ -61,14 +61,14 @@ Lastly, the features are scaled/standardized using StandardScaler().
 
 *Modeling*:
 
-First a baseline model is run using the Dummy Classifier. Additionally, common classifier models like Logistic Regression, K Nearest Neighbor (KNN), Decision Trees, and Support Vector Machines (SVM) are fit and cross-validated using the test-set. Two additional models namely Ridge Classifier and Random Forests are also fit and cross-validated, after perusing a package called Lazypredict’s results (discussed below). Confusion matrix is plotted, and classification reports showing different scores like Precision, Recall, F-1 are shown.
+First a baseline model is run using the Dummy Classifier. Additionally, common classifier models like Logistic Regression, K Nearest Neighbor (KNN), Decision Trees, and Support Vector Machines (SVM) are fit and cross-validated using the test-set. Two ensemble models namely Random Forest and AdaBoost classifier and also utilized. Ridge Classifier is also fit and cross-validated, after perusing a package called Lazypredict’s results. Lastly, a 2 layered neural network is trained and cross-validated to see if it improved the results (-it did not). Confusion matrix is plotted, and classification reports showing different scores like Precision, Recall, F-1 are shown.
 
 **For the critical life-saving decisions of ICU patients, it is important to minimize false negatives, so Recall is a crucial metric** in this exercise. The following summarizes the recall scores for the different models fit along with the times, test accuracies, and F-1 scores.
 
 
 *Dummy Classifier:*
 
-Test accuracy-0.85
+Test accuracy-0.86
 
 Test F1 score-0
 
@@ -80,96 +80,127 @@ Time-0.0003
 
 *Logistic Regression:*
 
-Test accuracy-0.64
+Test accuracy-0.79
 
-Test F1 score-0.38
+Test F1 score-0.44
 
-Test Recall score-0.82
+Test Recall score-0.60
 
-Time-0.02
+Time-0.06
 
 
 
 *KNN:*
 
-Test accuracy-0.50
+Test accuracy-0.64
 
-Test F1 score-0.31
+Test F1 score-0.34
 
-Test Recall score-0.82
+Test Recall score-0.67
 
-Time-0.01
+Time-0.003
 
 
 
 *Decision Tree:*
 
-Test accuracy-0.36
+Test accuracy-0.79
 
-Test F1 score-0.28
+Test F1 score-0.29
 
-Test Recall score-0.90
+Test Recall score-0.32
 
-Time-0.08
+Time-0.07
 
 
 
 *SVM:*
 
-Test accuracy-0.77
+Test accuracy-0.83
 
-Test F1 score-0.37
+Test F1 score-0.29
 
-Test Recall score-0.50
+Test Recall score-0.25
 
-Time-0.11
+Time-0.9
 
 
 
 *Random Forest:*
 
-Test accuracy-0.33
+Test accuracy-0.86
 
-Test F1 score-0.28
+Test F1 score-0.34
 
-Test Recall score-0.95
+Test Recall score-0.28
 
-Time-0.55
+Time-0.8
 
+
+
+*AdaBoost Classifier:*
+
+Test accuracy-0.84
+
+Test F1 score-0.39
+
+Test Recall score-0.38
+
+Time-0.6
 
 
 *Ridge Classifier:*
 
-Test accuracy-0.66
+Test accuracy-0.78
 
-Test F1 score-0.40
+Test F1 score-0.43
 
-Test Recall score-0.82
+Test Recall score-0.60
 
-Time-0.01
+Time-0.001
+
+
+*Neural Network:*
+
+Test accuracy-0.82
+
+Test F1 score-0.35
+
+Test Recall score-0.37
+
+Time-7
 
 
 
-Lazy Predict package is additionally used as it can run several ML models in a few lines of code. So instead of running models manually, lazypredict classifier is fit and scored during cross-validation for scores like ROC AUC, accuracy, F1, and Recall. Among several models run using lazypredict classifier, it is hard to determine the best model with different important metrics like Recall, ROC AUC, and F-1 score. **Random Forest classifier has the best recall (>0.95), but its F-1 score is very low**.
+While a high recall is crucial to minimize false negatives of wrongly identifying patients who are critical/ will die as survivors, but it may also be important to also have a higher F-1 score and ROC AUC for a better performing model so that overall scores are high in different aspects and less time/energy/money is wasted on false positives. So it maybe important to pick a model by compromise such that all score are generally high.
 
-While a high recall is crucial to minimize false negatives of wrongly identifying patients who are critical/ will die as survivors, but it may also be important to also have a higher F-1 score and ROC AUC for a better performing model so that overall scores are high in different aspects and less time/energy/money is wasted on false positives. So it maybe important to pick a model by compromise such that all score are generally high (e.g., higher than 60-70%). Model with a reasonably high ROC AUC and F-1 score and a high recall is **Ridge Classifier**. Of the models I ran, **Logistic regression** also fits this criterion.
+Models with both a high recall (>0.6) and a reasonably high ROC AUC and F-1 scores are **Logistic Regression**  and  **Ridge Classifier**.
 
 
 *Hyperparameter optimization using GridSearchCV*:
 
-This was done for the two models that are performing best overall....i.e, Ridge regression and Logistic regression which have a recall higher than or equal to 82% and F-1 scores of about 40%(70%) in models that I ran (in corresponding lazypredict models). The ROC AUC scores of both these models are 0.79. This gridsearchcv step did not improve the test scores compared to the previous models. 
+This was done for the two models that are performing best overall....i.e, Ridge regression and Logistic regression which have a recall higher than or equal to 60% and F-1 scores of about 40% in models that I ran. 
+
+This gridsearchcv step did improve the test scores compared to the previous models. The performance of both Ridge and Logistic classification models were Recall of about 63%, ROC AUC of 0.78, and F-1 scores of 45% (improved by 1-2% in the hyperparameter optimization step).
 
 Feature importance was derived from the coefficients of these models. From Ridge classifier, the top 5 variables that predict the survival/mortality of a patient in ICU are:  Chloride, Blood Sodium, Bicarbonate, Anion gap, and Urea nitrogen. From Logistic Regression, the top 5 variables that predict the survival/mortality of a patient in ICU are similar to Ridge Classifier:  Chloride, Blood Sodium, Bicarbonate, Anion gap, and Urea nitrogen.
 
 
-#### Next steps
-What suggestions do you have for next steps?
+#### Recommendations and Next steps
 
-Next steps after Module 20 would be to improve the modeling efforts to get higher F-1 and ROC AUC scores. This will be discussed with the learning facilitator, Savio. Additionally, discrepancy between F-1 scores for a given model obtained with lazypredict classifier and the model I ran will be a question (for the Consultation call).
+Feature importance reveals similar features from both models that predict mortality at ICU in the hospital and these are (top 5 in descending order of importance):
 
-Additionally, neural network based models will be explored. 
+-Chloride
 
-And lastly, SHAP (SHapley Additive exPlanations) analysis may further be carried out to explain causal effects (such as how each model feature has contributed to an individual prediction), as time allows.
+-Blood Sodium
+
+-Bicarbonate
+
+-Anion gap
+
+-Urea nitrogen
+
+Next steps in the future could involve collecting additional data, imporving model fit and scores, and validating improved model on additional validation data. To improve computational efficiency, advanced packages like PyCaret could be used, and AutoML could be utilized. Deployment of the model should be done while keeping in mind the limitations of the model, and prioritizing patient care and efficient and careful utilization of ICU resources.
 
 
 #### Outline of project
