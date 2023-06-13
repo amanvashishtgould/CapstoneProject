@@ -8,34 +8,27 @@ Link to Jupyter notebook: https://github.com/amanvashishtgould/CapstoneProject/b
 TBD
 
 #### Rationale
-Why should anyone care about this question?
 
 The predictors of in-hospital mortality for intensive care units (ICU) remain poorly characterized. Developing predictive models based on mortality risk factors can prevent mortality through controlling acute conditions and planning in intensive care units. This could help hospitals to focus their resources and care on critical patients who have these mortality risk factors, and improve ICU survival rates and overall, the healthcare system.
 
 #### Research Question
-What are you trying to answer?
 
 The goal of this project is to predict whether or not a patient at a hospital ICU would survive. To this end, I aim to develop and cross-validate prediction models for all-cause in-hospital mortality among ICU-admitted patients, using different demographic, personal medical history, comorbidities, and lab (bloodwork, urine test, pulmonary tests, cardiac tests etc.) data.
 
 #### Data Sources
-What data will you use to answer you question?
 
 The dataset used is from the Medical Information Mart for Intensive Care III (MIMIC-III) based database found on Kaggle (https://www.kaggle.com/datasets/saurabhshahane/in-hospital-mortality-prediction) . It is a publicly available critical care database containing de-identified data on patient admissions to the ICU of the Beth Israel Deaconess Medical Center, Boston, USA, between 1 June, 2001 and 31 October, 2012. In the data, the demographic characteristics and vital signs extracted were recorded during the ﬁrst 24 hours of each admission and laboratory variables were measured during the entire ICU stay. Comorbidities were identified using ICD-9 codes.
 
 #### Methodology
-What methods are you using to answer the question?
 
-- CRISP-DM framework will be followed throughout this project.
-- After data cleaning, a basic exploratory data analysis will be performed.
-- Given the many variables, Principal Component Analysis (PCA) may be explored for the purposes of dimensionality reduction.
-- Since this is a classification machine learning (ML) problem, several ML models like Logistic Regression, Decision Trees, K Nearest Neighbors (KNN), and Support Vector machines (SVM) will be fit.
-- Additionally, some ensemble models like Random Forests, XGB Classifier, AdaBoost Classifier etc. will also be tried after they are covered in the program.
-- Furthermore, Neural Networks models will also be explored as an additional model option for this problem.
-- Permutation importance will be further employed to identify the variables that predict the mortality factors in the patients.
-- SHAP (SHapley Additive exPlanations) analysis may further be carried out to explain causal effects (such as how each model feature has contributed to an individual prediction), as time allows.
+- CRISP-DM framework is followed throughout this project.
+- After data cleaning, a basic exploratory data analysis is performed.
+- Since this is a classification machine learning (ML) problem, several ML models like Logistic Regression, Decision Trees, K Nearest Neighbors (KNN), and Support Vector machines (SVM) are fit.
+- Additionally, some ensemble models like Random Forests, AdaBoost Classifier etc. are also be implemented.
+- Furthermore, a Neural Networks model is also explored as an additional model option for this problem.
+- Feature importance is further employed to identify the variables that predict the mortality factors in the patients.
 
 #### Results
-What did your research find?
 
 *Business understanding*:
 
