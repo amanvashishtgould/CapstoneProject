@@ -5,7 +5,7 @@ Link to Jupyter notebook: https://github.com/amanvashishtgould/CapstoneProject/b
 
 
 #### Executive summary
-This capstone project develops and cross-validates machine learning and AI models to predict whether or not a patient at a hospital ICU survives, and further aims to characterize the predictors of ICU mortality. This is done by utilizing a critical care database of ICU-admitted patients, and understanding the data, types of variables, missing values, histogram of predictors, independence of predictor variables, and balancing of target class of survival/non-survival etc. Models with best performance are further optimized using hyperparameter tuning, which further slighly increased the accuracy of the chosen evaluation metric metrics. Lastly, feature importance explaining the top predictors of ICU mortality are identified.
+This capstone project develops and cross-validates machine learning and AI models to predict whether or not a patient at a hospital ICU survives, and further aims to characterize the predictors of ICU mortality. This is done by utilizing a critical care database of ICU-admitted patients, and understanding the data, types of variables, missing values, histogram of predictors, independence of predictor variables, and balancing of target class of survival/non-survival. Models with best performance are further optimized using hyperparameter tuning, which further slightly increased the accuracy of the chosen evaluation metrics. Lastly, the top predictors of ICU mortality are identified, and recommendations for future deployment and model improvement summarized.
 
 #### Rationale
 
