@@ -38,7 +38,7 @@ The goal of this project is to predict the mortality of ICU patients at a hospit
 
 The dataset is a publicly available critical care database containing de-identified data on patient admissions, and includes demographic characteristics, vital signs, medical history like comorbidities, and measured laboratory variables.
 
-*Dara processing and Exploratory Data Analysis*:
+**Data processing and Exploratory Data Analysis**:
 
 There are 1177 rows and 51 columns in this dataset, with numeric(int or float) type columns.
 
@@ -49,7 +49,7 @@ The outcome data is imbalanced as there are about 86.5 % of survivors and 13.5% 
 
 Histogram distributions of all the predictor variable columns are plotted and colored by the outcome variable, and it was seen that some variables like age, BMI, atrialfibrillation, platelets, blood potassium, anion gap, bicarbonate, and lactic acid do seem to show some differences in distributions for different outcomes.
 
-*Data Preparation: Feature Engineering and Train-test split*:
+**Data Preparation: Feature Engineering and Train-test split**:
 
 A quick seaborn-based heatmap of correlation of different variables is plotted. The outcome does not seem to be highly correlated with any of the variables. There are some high correlations amongst the variables like PT and INR; MCH and MCV; hematocrit and RBC; and Lymphocytes and Neutrophils. One variable in each of these pairs of multicollinear variables are removed.
 
@@ -59,7 +59,7 @@ Since the target data is imbalanced, Synthetic Minority Oversampling Technique (
 
 Lastly, the features are scaled/standardized using StandardScaler().
 
-*Modeling*:
+**Modeling**:
 
 First a baseline model is run using the Dummy Classifier. Additionally, common classifier models like Logistic Regression, K Nearest Neighbor (KNN), Decision Trees, and Support Vector Machines (SVM) are fit and cross-validated using the test-set. Two ensemble models namely Random Forest and AdaBoost classifier and also utilized. Ridge Classifier is also fit and cross-validated, after perusing a package called Lazypredict’s results. Lastly, a 2 layered neural network is trained and cross-validated to see if it improved the results (-it did not). Confusion matrix is plotted, and classification reports showing different scores like Precision, Recall, F-1 are shown.
 
@@ -160,7 +160,7 @@ Test Recall score-0.60
 Time-0.001
 
 
-*Neural Network:*
+*Neural Network with 2 layers:*
 
 Test accuracy-0.82
 
@@ -177,13 +177,13 @@ While a high recall is crucial to minimize false negatives of wrongly identifyin
 Models with both a high recall (>0.6) and a reasonably high ROC AUC and F-1 scores are **Logistic Regression**  and  **Ridge Classifier**.
 
 
-*Hyperparameter optimization using GridSearchCV*:
+**Hyperparameter optimization using GridSearchCV**:
 
 This was done for the two models that are performing best overall....i.e, Ridge regression and Logistic regression which have a recall higher than or equal to 60% and F-1 scores of about 40% in models that I ran. 
 
 This gridsearchcv step did improve the test scores compared to the previous models. The performance of both Ridge and Logistic classification models were Recall of about 63%, ROC AUC of 0.78, and F-1 scores of 45% (improved by 1-2% in the hyperparameter optimization step).
 
-Feature importance was derived from the coefficients of these models. From Ridge classifier, the top 5 variables that predict the survival/mortality of a patient in ICU are:  Chloride, Blood Sodium, Bicarbonate, Anion gap, and Urea nitrogen. From Logistic Regression, the top 5 variables that predict the survival/mortality of a patient in ICU are similar to Ridge Classifier:  Chloride, Blood Sodium, Bicarbonate, Anion gap, and Urea nitrogen.
+Feature importance was derived from the coefficients of these models. From both Ridge classifier and Logistic regression, the top variables that predict the survival/mortality of a patient in ICU are:  Chloride, Blood Sodium, Bicarbonate, Anion gap, and Urea nitrogen.
 
 
 #### Recommendations and Next steps
