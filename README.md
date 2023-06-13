@@ -5,7 +5,7 @@ Link to Jupyter notebook: https://github.com/amanvashishtgould/CapstoneProject/b
 
 
 #### Executive summary
-TBD
+This capstone project develops and cross-validates machine learning and AI models to predict whether or not a patient at a hospital ICU survives, and further aims to characterize the predictors of ICU mortality. This is done by utilizing a critical care database of ICU-admitted patients, and understanding the data, types of variables, missing values, histogram of predictors, independence of predictor variables, and balancing of target class of survival/non-survival etc. Models with best performance are further optimized using hyperparameter tuning, which further slighly increased the accuracy of the chosen evaluation metric metrics. Lastly, feature importance explaining the top predictors of ICU mortality are identified.
 
 #### Rationale
 
@@ -186,7 +186,7 @@ This gridsearchcv step did improve the test scores compared to the previous mode
 Feature importance was derived from the coefficients of these models. From both Ridge classifier and Logistic regression, the top variables that predict the survival/mortality of a patient in ICU are:  Chloride, Blood Sodium, Bicarbonate, Anion gap, and Urea nitrogen.
 
 
-#### Recommendations and Next steps
+#### Recommendations and Next steps:
 
 Feature importance reveals similar features from both models that predict mortality at ICU in the hospital and these are (top 5 in descending order of importance):
 
