@@ -5,7 +5,7 @@ Link to Jupyter notebook: https://github.com/amanvashishtgould/CapstoneProject/b
 
 
 #### Executive summary
-This capstone project develops and cross-validates machine learning and AI models to predict whether or not a patient at a hospital ICU survives, and further aims to characterize the predictors of ICU mortality. This is done by utilizing a critical care database of ICU-admitted patients, and understanding the data, types of variables, missing values, histogram of predictors, independence of predictor variables, and balancing of target class of survival/non-survival. Models with best performance are further optimized using hyperparameter tuning, which further slightly increased the accuracy of the chosen evaluation metrics. Lastly, the top predictors of ICU mortality are identified, and recommendations for future deployment and model improvement summarized.
+This capstone project develops and cross-validates machine learning(ML) and AI models to predict whether or not a patient at a hospital ICU survives, and further aims to characterize the predictors of ICU mortality. This is done by utilizing a critical care database of ICU-admitted patients, and understanding the data, types of variables, missing values, histogram distributions of predictors, independence of predictor variables, and balancing the target survival/non-survival classes. Several models are fit and cross validated using selected evaluation metrics. Models with best performance are further optimized using hyperparameter tuning, which further slightly increased the accuracy of the chosen evaluation metrics. Lastly, the top predictors of ICU mortality are identified, and recommendations for future deployment and model improvement summarized.
 
 #### Rationale
 
@@ -24,7 +24,7 @@ The dataset used is from the Medical Information Mart for Intensive Care III (MI
 - CRISP-DM framework is followed throughout this project.
 - After data cleaning, a basic exploratory data analysis is performed.
 - Since this is a classification machine learning (ML) problem, several ML models like Logistic Regression, Decision Trees, K Nearest Neighbors (KNN), and Support Vector machines (SVM) are fit.
-- Additionally, some ensemble models like Random Forests, AdaBoost Classifier etc. are also be implemented.
+- Additionally, some ensemble models like Random Forests, AdaBoost Classifier etc. are also implemented.
 - Furthermore, a Neural Networks model is also explored as an additional model option for this problem.
 - Feature importance is further employed to identify the variables that predict the mortality factors in the patients.
 
@@ -183,7 +183,7 @@ This was done for the two models that are performing best overall....i.e, Ridge 
 
 This gridsearchcv step did improve the test scores compared to the previous models. The performance of both Ridge and Logistic classification models were Recall of about 63%, ROC AUC of 0.78, and F-1 scores of 45% (improved by 1-2% in the hyperparameter optimization step).
 
-Feature importance was derived from the coefficients of these models. From both Ridge classifier and Logistic regression, the top variables that predict the survival/mortality of a patient in ICU are:  Chloride, Blood Sodium, Bicarbonate, Anion gap, and Urea nitrogen.
+Feature importance was derived from the coefficients of these models. From both Ridge classifier and Logistic regression, the top variables that predict the survival/mortality of a patient in ICU are summarized below.
 
 
 #### Recommendations and Next steps:
