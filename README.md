@@ -30,11 +30,11 @@ The dataset used is from the Medical Information Mart for Intensive Care III (MI
 
 #### Results
 
-*Business understanding*:
+**Business understanding**:
 
 The goal of this project is to predict the mortality of ICU patients at a hospital (i.e., whether or not a patient at the ICU would survive).
 
-*Data understanding*:
+**Data understanding**:
 
 The dataset is a publicly available critical care database containing de-identified data on patient admissions, and includes demographic characteristics, vital signs, medical history like comorbidities, and measured laboratory variables.
 
